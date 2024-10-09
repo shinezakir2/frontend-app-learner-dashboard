@@ -36,7 +36,7 @@ export const LearnerDashboardHeader = () => {
                           <button id="search-icon-btn" class="btn-icon">
                               <i class="icon-search" id="search-icon" data-search="true"></i>
                           </button>
-                          <input type="text" class="text-input" name="query" value="" id="header-search-text" data-values="[]" placeholder="Search" autocomplete="off">
+                          <input type="text" class="text-input" name="query" value="" id="header-search-text" data-values="[]" placeholder="Search" autocomplete="off" />
                       </form>
                   </div>
               </div>
