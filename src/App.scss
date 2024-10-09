@@ -7352,15 +7352,6 @@ p.as-list {
     margin-bottom: 0 !important
 }
 
-select {
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    background-image: url("./assets/images/down_arrow.47cb66cc7783.png");
-    background-repeat: no-repeat;
-    background-position: right 15px center;
-    background-size: 10px
-}
 
 @media (max-width: 767px) {
     p, ul {
@@ -7434,7 +7425,7 @@ ul {
 
 .ticked li:before {
     content: "";
-    background-image: url("./assets/images/tick.png");
+   
     height: 10px;
     width: 13px;
     display: block;
