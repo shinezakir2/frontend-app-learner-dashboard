@@ -5,7 +5,7 @@ import { AppContext } from '@edx/frontend-platform/react';
 import Header from '@edx/frontend-component-header';
 import { reduxHooks } from 'hooks';
 import urls from 'data/services/lms/urls';
-
+import BrandLogo from './BrandLogo';
 import ConfirmEmailBanner from './ConfirmEmailBanner';
 
 import { useLearnerDashboardHeaderMenu, findCoursesNavClicked } from './hooks';
@@ -26,23 +26,45 @@ export const LearnerDashboardHeader = () => {
     exploreCoursesClick,
   });
 
-  return (
-      <div class="edraak-header scrolling">
-          <div class="edraak-header-container">
-              <div class="edraak-header__site-navigation">
-                 
-                  <div class="edraak-header__search hidden-xs">
-                      <form method="get" action="/courses" class="search-form" id="header-search-form" autocomplete="off">
-                          <button id="search-icon-btn" class="btn-icon">
-                              <i class="icon-search" id="search-icon" data-search="true"></i>
-                          </button>
-                          <input type="text" class="text-input" name="query" value="" id="header-search-text" data-values="[]" placeholder="Search" autocomplete="off" />
-                      </form>
-                  </div>
-              </div>
-          </div>
-      </div>
-  );
+
+    return (
+        <div class="edraak-header scrolling">
+            <div class="edraak-header-container">
+                <div class="edraak-header__site-navigation">
+                    <BrandLogo />
+                    <ConfirmEmailBanner />
+                    <div class="edraak-header__navigation-links hidden-xs">
+                        <div class="edraak-header__navigation-link">
+                            <a class="nav-link" href="test"
+                                aria-current="test">
+                                    test link
+                            </a>
+                        </div>
+                    </div>
+                    <div class="edraak-header__search hidden-xs">
+                        
+                    </div>
+                    <div class="edraak-header__site-controls hidden-xs">
+                        <a class="btn btn-primary btn-rounded btn-wide btn-header btn-header-dashboard" href="https://programs.edraak.org/en/learn/">
+                            Dashboard
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+
+  //return (
+  //  <>
+  //    <ConfirmEmailBanner />
+  //    <Header
+  //      mainMenuItems={learnerHomeHeaderMenu.mainMenu}
+  //      secondaryMenuItems={learnerHomeHeaderMenu.secondaryMenu}
+  //      userMenuItems={learnerHomeHeaderMenu.userMenu}
+  //    />
+  //    <MasqueradeBar />
+  //  </>
+  //);
 };
 
 LearnerDashboardHeader.propTypes = {};

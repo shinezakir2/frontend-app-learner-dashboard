@@ -12,13 +12,13 @@ export const BrandLogo = () => {
   const dashboard = reduxHooks.useEnterpriseDashboardData();
 
   return (
-    <a href={dashboard?.url || '/'} className="mx-auto">
-      <img
-        className="logo py-3 test from my template"
+    <a href={dashboard?.url || '/'} className="edraak-header__brand hidden-sm hidden-xs">
+    <img loading="lazy"
+        className="logo"
         src={getConfig().LOGO_URL}
         alt={formatMessage(messages.logoAltText)}
       />
-    </a>
+      </a>
   );
 };
 
