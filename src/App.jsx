@@ -77,7 +77,7 @@ export const App = () => {
         <title>{formatMessage(messages.pageTitle)}</title>
         <link rel="shortcut icon" href={getConfig().FAVICON_URL} type="image/x-icon" />
       </Helmet>
-      <div>
+    <div class="transparent">
         <AppWrapper>
           <LearnerDashboardHeader />
           <main>

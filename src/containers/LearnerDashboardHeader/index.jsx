@@ -27,15 +27,21 @@ export const LearnerDashboardHeader = () => {
   });
 
   return (
-    <>
-      <ConfirmEmailBanner />
-      <Header
-        mainMenuItems={learnerHomeHeaderMenu.mainMenu}
-        secondaryMenuItems={learnerHomeHeaderMenu.secondaryMenu}
-        userMenuItems={learnerHomeHeaderMenu.userMenu}
-      />
-      <MasqueradeBar />
-    </>
+      <div class="edraak-header scrolling">
+          <div class="edraak-header-container">
+              <div class="edraak-header__site-navigation">
+                 
+                  <div class="edraak-header__search hidden-xs">
+                      <form method="get" action="/courses" class="search-form" id="header-search-form" autocomplete="off">
+                          <button id="search-icon-btn" class="btn-icon">
+                              <i class="icon-search" id="search-icon" data-search="true"></i>
+                          </button>
+                          <input type="text" class="text-input" name="query" value="" id="header-search-text" data-values="[]" placeholder="Search" autocomplete="off">
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
   );
 };
 
