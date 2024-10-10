@@ -35,17 +35,7 @@ export const DashboardLayout = ({ children }) => {
     : columnConfig.courseList.noSidebar;
 
   return (
-    <Container fluid size="xl">
-      <Row>
-        <Col {...courseListColumnProps} className="course-list-column test test">
-          {children}
-        </Col>
-        <Col {...columnConfig.sidebar} className="sidebar-column test">
-          {!isCollapsed && (<h2 className="course-list-title">&nbsp;</h2>)}
-          <WidgetSidebar />
-        </Col>
-      </Row>
-    </Container>
+    <div>{children}</div>
   );
 };
 DashboardLayout.propTypes = {

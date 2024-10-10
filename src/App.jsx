@@ -28,6 +28,7 @@ import LearnerDashboardHeader from 'containers/LearnerDashboardHeader';
 import { getConfig } from '@edx/frontend-platform';
 import messages from './messages';
 import './App.scss';
+import './assets/css/adcda-ui-rtl.min.css';
 
 export const App = () => {
   const { authenticatedUser } = React.useContext(AppContext);
@@ -39,7 +40,7 @@ export const App = () => {
   const hasNetworkFailure = isFailed.initialize || isFailed.refreshList;
   const { supportEmail } = reduxHooks.usePlatformSettingsData();
   const loadData = reduxHooks.useLoadData();
-
+  const year = new Date().getFullYear();
   React.useEffect(() => {
     if (authenticatedUser?.administrator || getConfig().NODE_ENV === 'development') {
       window.loadEmptyData = () => {
@@ -77,10 +78,10 @@ export const App = () => {
         <title>{formatMessage(messages.pageTitle)}</title>
         <link rel="shortcut icon" href={getConfig().FAVICON_URL} type="image/x-icon" />
       </Helmet>
-    <div class="transparent">
+    <div id="outdated">
         <AppWrapper>
           <LearnerDashboardHeader />
-          <main class="adcda_page">
+          <main class="body-content">
             {hasNetworkFailure
               ? (
                 <Alert variant="danger">
@@ -91,44 +92,68 @@ export const App = () => {
               )}
           </main>
         </AppWrapper>
-              <div class="site-footer-new">
-                  <div class="container contentContainer">
-                      <div class="row">
-                          <div class="col-xs-12 col-sm-6">
-                              <div class="left-container">
-                                  <div class="row">
-                                      <div class="col-xs-6">
-                                          <div class="more-links">
-                                              <h3 class="footer-title">More</h3>
-                                              <div class="links-list">
-                                                  <a class="link-item" href="/blog">Our Blog</a>
-                                                  <a class="link-item" href="/help">Help center</a>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="col-xs-6">
-                                          <div class="more-links">
-                                              <h3 class="footer-title">About us</h3>
-                                              <div class="links-list">
-                                                  <a class="link-item" href="/about">About Us</a>
-                                                  <a class="link-item" href="/donate">Donate</a>
-                                                  <a class="link-item" href="/privacy">Privacy Policy</a>
-                                                  <a class="link-item" href="/contact">Contact Us</a>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="copyright-container">
-                              <span class="copyright-text">©${datetime.now().year} ADCDA LMS</span>
-                              <span class="copyright-text">All rights reserved</span>
-                          </div>
-                      </div>
+              <div class="site-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <span class="copy">
+                          &copy;{year} ADCDA.
+                        </span>
+                        <br />
+                        <span class="copy">
+                          ALL RIGHTS RESERVED.
+                        </span>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <ul>
+                            <li>
+                                <a class="" href="https://www.edraak.org/en/about-us">About</a>
+                            </li>
+                            <li>
+                                
+                                <a class="" href="https://www.edraak.org/blog">Our Blog</a>
+                            </li>
+                            <li>
+                                
+                                <a class="" href="https://www.edraak.org/en/help/how-it-works">How It Works</a>
+                            </li>
+                            <li>
+                                
+                                <a class="" href="https://www.edraak.org/en/help">Help Center</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <ul>
+                            <li>
+                                
+                                <a class="" href="https://www.edraak.org/en/terms-of-service">Terms of Service</a>
+                            </li>
+                            <li>
+                                
+                                <a class="" href="https://www.edraak.org/en/privacy-policy">Privacy Policy</a>
+                            </li>
+                            <li>
+                                
+                                <a class="" href="https://www.edraak.org/en/cookie-policy">Cookie Policy</a>
+                            </li>
+                            <li>
+                                
+                                <a class="" href="https://www.edraak.org/en/data-processing-agreement">Data Processing Agreement</a>
+                            </li>
+                            <li>
+                                
+                                <a class="" href="https://www.edraak.org/en/contact-us">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <span class="copy visible-xs text-center">
+                      All rights reserved {year} &copy;.
+                    </span>
+
                   </div>
-              </div>
+                </div>
+            </div>
       </div>
     </>
   );

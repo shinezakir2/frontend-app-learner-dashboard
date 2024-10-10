@@ -19,25 +19,31 @@ export const CourseCard = ({
   const isCollapsed = useIsCollapsed();
   const orientation = isCollapsed ? 'vertical' : 'horizontal';
   return (
-    <div className="mb-4.5 course-card" id={cardId} data-testid="CourseCard">
+    <div className="ed-card course-card" id={cardId} data-testid="CourseCard">
       <Card orientation={orientation}>
-        <div className="d-flex flex-column w-100">
-          <div {...(!isCollapsed && { className: 'd-flex' })}>
-            <CourseCardImage cardId={cardId} orientation="horizontal" />
-            <Card.Body>
-              <Card.Header
-                title={<CourseCardTitle cardId={cardId} />}
-                actions={<CourseCardMenu cardId={cardId} />}
-              />
-              <Card.Section className="pt-0">
-                <CourseCardDetails cardId={cardId} />
-              </Card.Section>
-              <Card.Footer orientation={orientation}>
+        <div>
+            <div className="course-card__image-container">
+                <CourseCardImage cardId={cardId} orientation="horizontal" />
+                <span class="course-card__image-type-overlay course">Course</span>
+            </div>
+            <div class="ed-card-body">
+                <p class="ed-p4 ed-font-bold course-card__organization">LMS</p>
+                <div class="ed-card__options-menu">
+                    <button class="ed-btn ed-btn-ghost ed-card__options-menu-btn" type="button">...</button>
+                    <ul class="ed-card__options-menu-list">
+                        <li class="ed-card__options-menu-list-item">
+                            <p class="ed-p4 ed-card__options-menu-list-item-text">Un-Enroll</p>
+                        </li>
+                        <li class="ed-card__options-menu-list-item">
+                            <p class="ed-p4 ed-card__options-menu-list-item-text">Unsubscribe from emails</p>
+                        </li>
+                    </ul>
+                </div>
+                <CourseCardTitle cardId={cardId} />
+            </div>
+            <div class="ed-card-footer">
                 <CourseCardActions cardId={cardId} />
-              </Card.Footer>
-            </Card.Body>
-          </div>
-          <CourseCardBanners cardId={cardId} />
+            </div>
         </div>
       </Card>
     </div>

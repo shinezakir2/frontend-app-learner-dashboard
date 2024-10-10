@@ -21,7 +21,7 @@ export const CourseCardActions = ({ cardId }) => {
   const { isArchived } = reduxHooks.useCardCourseRunData(cardId);
 
   return (
-    <ActionRow data-test-id="CourseCardActions">
+    <ActionRow className="course-card__footer-buttons" data-test-id="CourseCardActions">
       {!(isEntitlement || isVerified || isExecEd2UCourse) && <UpgradeButton cardId={cardId} />}
       {isEntitlement && (isFulfilled
         ? <ViewCourseButton cardId={cardId} />

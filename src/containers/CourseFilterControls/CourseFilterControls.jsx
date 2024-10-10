@@ -47,15 +47,8 @@ export const CourseFilterControls = ({
 
   return (
     <div id="course-filter-controls">
-      <Button
-        ref={setTarget}
-        variant="outline-primary"
-        iconBefore={Tune}
-        onClick={open}
-        disabled={!hasCourses}
-      >
-        {formatMessage(messages.refine)}
-      </Button>
+    <h4 class="ed-h4 side-search-and-filters-title">Search your enrollments</h4>
+    <div class="ed-h4 side-search-and-filters-title"></div>
       <Form>
         {isMobile
           ? (

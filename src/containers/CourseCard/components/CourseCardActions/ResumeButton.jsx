@@ -25,6 +25,7 @@ export const ResumeButton = ({ cardId }) => {
       disabled={disableResumeCourse}
       as="a"
       href="#"
+      className="ed-btn ed-btn-primary"
       onClick={handleClick}
     >
       {formatMessage(messages.resume)}

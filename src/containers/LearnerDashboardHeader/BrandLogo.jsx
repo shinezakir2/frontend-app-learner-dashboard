@@ -12,13 +12,9 @@ export const BrandLogo = () => {
   const dashboard = reduxHooks.useEnterpriseDashboardData();
 
   return (
-    <a href={dashboard?.url || '/'} className="edraak-header__brand hidden-sm hidden-xs">
-    <img loading="lazy"
-        className="logo"
-        src={getConfig().LOGO_URL}
-        alt={formatMessage(messages.logoAltText)}
-      />
-      </a>
+        <a href={dashboard?.url || '/'}>
+            <img class="ed-header-logo" src={getConfig().LOGO_URL} alt={formatMessage(messages.logoAltText)} />
+        </a>
   );
 };
 

@@ -24,23 +24,10 @@ export const CourseCardImage = ({ cardId, orientation }) => {
   const image = (
     <>
       <img
-        className="pgn__card-image-cap show"
+        className="ed-card-img ed-card-img-top"
         src={bannerImgSrc}
         alt={formatMessage(messages.bannerAlt)}
       />
-      {
-        isVerified && (
-          <span
-            className="course-card-verify-ribbon-container"
-            title={formatMessage(messages.verifiedHoverDescription)}
-          >
-            <Badge as="div" variant="success" className="w-100">
-              {formatMessage(messages.verifiedBanner)}
-            </Badge>
-            <img src={verifiedRibbon} alt={formatMessage(messages.verifiedBannerRibbonAlt)} />
-          </span>
-        )
-      }
     </>
   );
   return disableCourseTitle

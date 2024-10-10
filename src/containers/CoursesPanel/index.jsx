@@ -27,13 +27,8 @@ export const CoursesPanel = () => {
   const hasCourses = reduxHooks.useHasCourses();
   const courseListData = useCourseListData();
   return (
-    <div className="course-list-container">
-      <div className="course-list-heading-container">
-        <h2 className="course-list-title">{formatMessage(messages.myCourses)}</h2>
-        <div className="course-filter-controls-container">
-          <CourseFilterControls {...courseListData.filterOptions} />
-        </div>
-      </div>
+    <div className="page-content">
+       <h2 className="ed-h2 page-content-title">{formatMessage(messages.myCourses)}</h2>
       {hasCourses ? (
         <PluginSlot
           id="course_list"
