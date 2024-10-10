@@ -35,20 +35,26 @@ export const LearnerDashboardHeader = () => {
                     <ConfirmEmailBanner />
                     <div class="edraak-header__navigation-links hidden-xs">
                         <div class="edraak-header__navigation-link">
-                            <a class="nav-link" href="test"
-                                aria-current="test">
-                                    test link
-                            </a>
+                            {learnerHomeHeaderMenu.mainMenu.map((item, index) => (
+                                <a class="nav-link" href={item.href}>{item.content}</a>
+                            ))}
                         </div>
                     </div>
-                    <div class="edraak-header__search hidden-xs">
-                        
-                    </div>
-                    <div class="edraak-header__site-controls hidden-xs">
-                        <a class="btn btn-primary btn-rounded btn-wide btn-header btn-header-dashboard" href="https://programs.edraak.org/en/learn/">
-                            Dashboard
+                </div>
+                <div class="edraak-header__site-controls hidden-xs">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="avatar">
+                                {/*<img class="avatar-img" src="${static.url('images/user.svg')}" data-src="${static.url('images/user.svg')}">*/}</span>
+                            <span class="username">{authenticatedUser?.username}</span>
+                            <span class="caret"></span>
                         </a>
-                    </div>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            {learnerHomeHeaderMenu.userMenu[0].items.map((item, index) => (
+                                <li><a href={item.href}>{item.content}</a></li>
+                            ))}
+                        </ul>
+                    </li>
                 </div>
             </div>
         </div>
