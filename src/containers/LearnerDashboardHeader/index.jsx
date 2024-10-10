@@ -34,11 +34,11 @@ export const LearnerDashboardHeader = () => {
                     <BrandLogo />
                     <ConfirmEmailBanner />
                     <div class="edraak-header__navigation-links hidden-xs">
-                        <div class="edraak-header__navigation-link">
-                            {learnerHomeHeaderMenu.mainMenu.map((item, index) => (
+                        {learnerHomeHeaderMenu.mainMenu.map((item, index) => (
+                            <div class="edraak-header__navigation-link">
                                 <a class="nav-link" href={item.href}>{item.content}</a>
-                            ))}
-                        </div>
+                            </div>
+                        ))}                        
                     </div>
                 </div>
                 <div class="edraak-header__site-controls hidden-xs">

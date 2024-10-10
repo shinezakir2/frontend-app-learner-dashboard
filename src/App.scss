@@ -5204,7 +5204,7 @@ tbody.collapse.in {
 }
 
 .breadcrumb > li + li:before {
-    content: "/ ";
+    content: "/ï¿½";
     padding: 0 5px;
     color: #ccc
 }
@@ -7555,7 +7555,7 @@ ul {
 }
 
 .list li:before {
-    content: "• ";
+    content: "ï¿½ ";
     color: #0ca7aa;
     position: absolute;
     right: auto;
@@ -13059,4 +13059,8 @@ button.swiper-pagination-bullet {
 
 .swiper-container-coverflow .swiper-wrapper {
     -ms-perspective: 1200px
+}
+
+.adcda_page {
+    padding-top: 140px
 }

@@ -80,7 +80,7 @@ export const App = () => {
     <div class="transparent">
         <AppWrapper>
           <LearnerDashboardHeader />
-          <main>
+          <main class="adcda_page">
             {hasNetworkFailure
               ? (
                 <Alert variant="danger">
@@ -91,7 +91,44 @@ export const App = () => {
               )}
           </main>
         </AppWrapper>
-        <FooterSlot />
+              <div class="site-footer-new">
+                  <div class="container contentContainer">
+                      <div class="row">
+                          <div class="col-xs-12 col-sm-6">
+                              <div class="left-container">
+                                  <div class="row">
+                                      <div class="col-xs-6">
+                                          <div class="more-links">
+                                              <h3 class="footer-title">More</h3>
+                                              <div class="links-list">
+                                                  <a class="link-item" href="/blog">Our Blog</a>
+                                                  <a class="link-item" href="/help">Help center</a>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-xs-6">
+                                          <div class="more-links">
+                                              <h3 class="footer-title">About us</h3>
+                                              <div class="links-list">
+                                                  <a class="link-item" href="/about">About Us</a>
+                                                  <a class="link-item" href="/donate">Donate</a>
+                                                  <a class="link-item" href="/privacy">Privacy Policy</a>
+                                                  <a class="link-item" href="/contact">Contact Us</a>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="copyright-container">
+                              <span class="copyright-text">©${datetime.now().year} ADCDA LMS</span>
+                              <span class="copyright-text">All rights reserved</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
       </div>
     </>
   );
