@@ -24,7 +24,8 @@ export const BeginCourseButton = ({ cardId }) => {
     <ActionButton
       disabled={disableBeginCourse}
       as="a"
-      href="#"
+        href="#"
+        className="ed-btn ed-btn-primary"
       onClick={handleClick}
     >
       {formatMessage(messages.beginCourse)}

@@ -21,14 +21,10 @@ export const CourseCardTitle = ({ cardId }) => {
       {disableCourseTitle ? (
         <span data-testid="CourseCardTitle">{courseName}</span>
       ) : (
-        <a
-          href={homeUrl}
-          className="ed-p1 ed-font-bold course-card__title"
-          data-testid="CourseCardTitle"
-          onClick={handleTitleClicked}
-        >
+        <p
+          className="ed-p1 ed-font-bold course-card__title">
           {courseName}
-        </a>
+        </p>
       )}
     </p>
   );

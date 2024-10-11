@@ -28,15 +28,16 @@ export const UpgradeButton = ({ cardId }) => {
     href: upgradeUrl,
     onClick: trackUpgradeClick,
   };
-  return (
-    <ActionButton
-      iconBefore={Locked}
-      variant="outline-primary"
-      disabled={disableUpgradeCourse}
-      {...!disableUpgradeCourse && enabledProps}
-    >
-      {formatMessage(messages.upgrade)}
-    </ActionButton>
+    return (
+      <span>  </span>
+    //<ActionButton
+    //  iconBefore={Locked}
+    //  variant="outline-primary"
+    //  disabled={disableUpgradeCourse}
+    //  {...!disableUpgradeCourse && enabledProps}
+    //>
+    //  {formatMessage(messages.upgrade)}
+    //</ActionButton>
   );
 };
 UpgradeButton.propTypes = {
