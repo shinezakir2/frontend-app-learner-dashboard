@@ -47,17 +47,10 @@ export const CourseFilterControls = ({
 
   return (
     <div id="course-filter-controls">
-    <h4 class="ed-h4 side-search-and-filters-title">Search your enrollments</h4>
-    <div class="ed-h4 side-search-and-filters-title"></div>
       <Form>
         {isMobile
           ? (
-            <Sheet
-              className="w-75"
-              position="left"
-              show={isOpen}
-              onClose={close}
-            >
+            <Sheet>
               <div className="p-1 mr-3">
                 <b>{formatMessage(messages.refine)}</b>
               </div>
@@ -68,32 +61,16 @@ export const CourseFilterControls = ({
               <div className="filter-form-row text-left m-1">
                 <SortForm {...{ sortBy, handleSortChange }} />
               </div>
-              <div className="pgn__modal-close-container">
-                <ModalCloseButton variant="tertiary" onClick={close}>
-                  <Icon src={Close} />
-                </ModalCloseButton>
-              </div>
             </Sheet>
           ) : (
-            <ModalPopup
-              positionRef={target}
-              isOpen={isOpen}
-              onClose={close}
-              placement="bottom-end"
-            >
-              <div
-                id="course-filter-controls-card"
-                className="bg-white p-3 rounded shadow d-flex flex-row"
-              >
-                <div className="filter-form-col">
+              <div id="course-filter-controls-card">
+                <div className="sidenav">
                   <FilterForm {...{ filters, handleFilterChange }} />
                 </div>
-                <hr className="h-100 bg-primary-200 mx-3 my-0" />
-                <div className="filter-form-col text-left m-1">
+                <div className="text-left m-1">
                   <SortForm {...{ sortBy, handleSortChange }} />
                 </div>
               </div>
-            </ModalPopup>
           )}
       </Form>
     </div>

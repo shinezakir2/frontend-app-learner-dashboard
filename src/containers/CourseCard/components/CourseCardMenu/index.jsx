@@ -37,30 +37,19 @@ export const CourseCardMenu = ({ cardId }) => {
     return null;
   }
 
-  return (
-    <>
-      <Dropdown onToggle={handleToggleDropdown}>
-        <Dropdown.Toggle
-          id={`course-actions-dropdown-${cardId}`}
-          as={IconButton}
-          src={MoreVert}
-          iconAs={Icon}
-          variant="primary"
-          alt={formatMessage(messages.dropdownAlt)}
-        />
-        <Dropdown.Menu>
-          {shouldShowUnenrollItem && (
-            <Dropdown.Item
-              disabled={isMasquerading}
-              onClick={unenrollModal.show}
-              data-testid={testIds.unenrollModalToggle}
-            >
-              {formatMessage(messages.unenroll)}
-            </Dropdown.Item>
-          )}
-          <SocialShareMenu cardId={cardId} emailSettings={emailSettings} />
-        </Dropdown.Menu>
-      </Dropdown>
+    return (
+      <>
+      <div class="ed-card__options-menu">
+            <button class="ed-btn ed-btn-ghost ed-card__options-menu-btn" type="button">...</button>
+            <ul class="ed-card__options-menu-list">
+                <li class="ed-card__options-menu-list-item">
+                    <button type="button" disabled={isMasquerading} onClick={unenrollModal.show} data-testid={testIds.unenrollModalToggle} class="ed-p4 ed-card__options-menu-list-item-text">
+                        {formatMessage(messages.unenroll)}
+                    </button>
+                </li>
+                <SocialShareMenu cardId={cardId} emailSettings={emailSettings} />
+            </ul>
+        </div>
       <UnenrollConfirmModal
         show={unenrollModal.isVisible}
         closeModal={unenrollModal.hide}

@@ -32,16 +32,15 @@ export const SocialShareMenu = ({ cardId, emailSettings }) => {
 
   return (
     <>
-      {isEmailEnabled && (
-        <Dropdown.Item
-          disabled={isMasquerading}
-          onClick={emailSettings.show}
-          data-testid={testIds.emailSettingsModalToggle}
-        >
-          {formatMessage(messages.emailSettings)}
-        </Dropdown.Item>
+    {isEmailEnabled && (
+    <li class="ed-card__options-menu-list-item">
+        <button type="button" disabled={isMasquerading} onClick={emailSettings.show} data-testid={testIds.emailSettingsModalToggle} class="ed-p4 ed-card__options-menu-list-item-text">
+            {formatMessage(messages.unenroll)}
+        </button>
+    </li>
       )}
-      {facebook.isEnabled && (
+          {facebook.isEnabled && (
+              <li class="ed-card__options-menu-list-item">
         <ReactShare.FacebookShareButton
           url={facebook.shareUrl}
           onClick={handleFacebookShare}
@@ -53,9 +52,11 @@ export const SocialShareMenu = ({ cardId, emailSettings }) => {
           className="pgn__dropdown-item dropdown-item"
         >
           {formatMessage(messages.shareToFacebook)}
-        </ReactShare.FacebookShareButton>
+                  </ReactShare.FacebookShareButton>
+              </li>
       )}
-      {twitter.isEnabled && (
+          {twitter.isEnabled && (
+              <li class="ed-card__options-menu-list-item">
         <ReactShare.TwitterShareButton
           url={twitter.shareUrl}
           onClick={handleTwitterShare}
@@ -67,7 +68,8 @@ export const SocialShareMenu = ({ cardId, emailSettings }) => {
           className="pgn__dropdown-item dropdown-item"
         >
           {formatMessage(messages.shareToTwitter)}
-        </ReactShare.TwitterShareButton>
+                  </ReactShare.TwitterShareButton>
+              </li>
       )}
     </>
   );

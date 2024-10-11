@@ -18,21 +18,11 @@ export const CourseCardDetails = ({ cardId }) => {
     changeOrLeaveSessionMessage,
   } = useCardDetailsData({ cardId });
 
-  return (
-    <span className="small" data-testid="CourseCardDetails">
+    return (
+    <p className="ed-p4 ed-font-bold course-card__organization" data-testid="CourseCardDetails">
       {providerName} • {courseNumber}
-      {!(isEntitlement && !isFulfilled) && accessMessage && (
-        ` • ${accessMessage}`
-      )}
-      {isEntitlement && isFulfilled && canChange ? (
-        <>
-          {' • '}
-          <Button variant="link" size="inline" className="m-0 p-0" onClick={openSessionModal}>
-            {changeOrLeaveSessionMessage}
-          </Button>
-        </>
-      ) : null}
-    </span>
+      
+    </p>
   );
 };
 

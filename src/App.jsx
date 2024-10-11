@@ -104,49 +104,6 @@ export const App = () => {
                           ALL RIGHTS RESERVED.
                         </span>
                     </div>
-                    <div class="col-md-4 col-6">
-                        <ul>
-                            <li>
-                                <a class="" href="https://www.edraak.org/en/about-us">About</a>
-                            </li>
-                            <li>
-                                
-                                <a class="" href="https://www.edraak.org/blog">Our Blog</a>
-                            </li>
-                            <li>
-                                
-                                <a class="" href="https://www.edraak.org/en/help/how-it-works">How It Works</a>
-                            </li>
-                            <li>
-                                
-                                <a class="" href="https://www.edraak.org/en/help">Help Center</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-6">
-                        <ul>
-                            <li>
-                                
-                                <a class="" href="https://www.edraak.org/en/terms-of-service">Terms of Service</a>
-                            </li>
-                            <li>
-                                
-                                <a class="" href="https://www.edraak.org/en/privacy-policy">Privacy Policy</a>
-                            </li>
-                            <li>
-                                
-                                <a class="" href="https://www.edraak.org/en/cookie-policy">Cookie Policy</a>
-                            </li>
-                            <li>
-                                
-                                <a class="" href="https://www.edraak.org/en/data-processing-agreement">Data Processing Agreement</a>
-                            </li>
-                            <li>
-                                
-                                <a class="" href="https://www.edraak.org/en/contact-us">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
                     <span class="copy visible-xs text-center">
                       All rights reserved {year} &copy;.
                     </span>

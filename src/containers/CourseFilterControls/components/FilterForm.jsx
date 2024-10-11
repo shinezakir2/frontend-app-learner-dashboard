@@ -24,14 +24,15 @@ export const FilterForm = ({
   const { formatMessage } = useIntl();
   return (
     <Form.Group>
-      <div className="filter-form-heading mb-1">{formatMessage(messages.courseStatus)}</div>
+      <h4 className="ed-h4 side-search-and-filters-title">{formatMessage(messages.courseStatus)}</h4>
       <Form.CheckboxSet
         name="course-status-filters"
+        className="sidenav-tabs"
         onChange={handleFilterChange}
         value={filters}
       >
         {filterOrder.map(filterKey => (
-          <Checkbox filterKey={filterKey} key={filterKey} />
+          <Checkbox className="sidenav-tab" filterKey={filterKey} key={filterKey} />
         ))}
       </Form.CheckboxSet>
     </Form.Group>

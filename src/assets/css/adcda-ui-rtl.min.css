@@ -2612,3 +2612,95 @@
 *, html {
     font-family: "Open Sans", "tajawal", Helvetica, Arial, sans-serif !important;
 }
+
+.ed-card__options-menu-list-item-text {
+    border: transparent;
+    background-color: transparent;
+}
+
+.ed-card__options-menu-list-item {
+    width: 160px;
+}
+
+.selectedFilters {
+    padding: 25px 0;
+}
+
+.selectedFilters .filterItem:first-of-type {
+    margin-left: 0;
+}
+
+.selectedFilters .filterItem {
+    margin: auto 5px;
+    margin-bottom: 10px;
+}
+
+.filterItem {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #3f5767;
+    border: 1px solid #6889a0;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.filterItem .filterItemName {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    margin-right: 10px;
+}
+
+.filterItem .closeBtn {
+    cursor: pointer;
+    width: 8px;
+}
+
+#dashboard .sidenav-tabs {
+    list-style: none;
+}
+
+#dashboard .pgn__form-checkbox.active, #dashboard .pgn__form-checkbox:hover, #dashboard .pgn__form-checkbox:active, #dashboard .pgn__form-checkbox:focus {
+    background-color: #0BA7AA;
+    color: white;
+    border-radius: 4px;
+}
+
+#dashboard .pgn__form-checkbox.active, #dashboard .pgn__form-checkbox:hover, #dashboard .pgn__form-checkbox:active, #dashboard .pgn__form-checkbox:focus>div {
+    background-color: #0BA7AA;
+    color: white;
+    border-radius: 4px;
+}
+
+#dashboard .pgn__form-checkbox {
+    display: flex;
+    align-items: center;
+    padding: 0 !important;
+    margin: 0 !important;
+    cursor: pointer;
+    width:100% !important
+}
+
+.pgn__form-checkbox-input{
+    display:none !important
+}
+
+.pgn__form-checkbox > div {
+    width: 100%;
+    padding: 15px 10px;
+}
+
+.pgn__form-checkbox > div:hover {
+    color: white;
+}
+
+#course-filter-controls-card {
+    padding: 0 20px;
+}

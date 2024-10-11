@@ -4,9 +4,7 @@ import { PluginSlot } from '@openedx/frontend-plugin-framework';
 import { useIntl } from '@edx/frontend-platform/i18n';
 
 import { reduxHooks } from 'hooks';
-import {
-  CourseFilterControls,
-} from 'containers/CourseFilterControls';
+
 import NoCoursesView from './NoCoursesView';
 
 import CourseList from './CourseList';
